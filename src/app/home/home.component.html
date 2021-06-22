@@ -1,0 +1,97 @@
+<app-header></app-header>
+  <div class="wrapper flex-row wrapper-main">
+    <main role="main">
+      
+       <!-- Featured article starts here-->
+      <article class="article-featured flex-column">
+        <h2 class="article-title">{{ homeData[0].title }}</h2>
+        <img src="{{ homeData[0].image }}" alt="Dog on the wooden floor looking at the camera.">
+        <p class="article-meta-info">{{ homeData[0].artical_info }}</p>
+         <p>{{ homeData[0].desc }}</p>
+          <a href="#" class="action-link">Continue reading</a>
+      </article>
+      
+      <!-- Recent articles list starts here-->
+       <!-- First article-->
+      <article class="article-recent flex-row">
+        <div class="article-recent-header">
+          <img src="{{ homeData[1].image }}" alt="Dog on the wooden floor looking at the camera.">
+          <p class="article-meta-info">{{ homeData[1].artical_info }}</p>
+        </div>
+        <div class="article-recent-body">
+          <h3 class="article-title">{{ homeData[1].title }}</h3>
+          <p>{{ homeData[1].desc }}</p>
+          <a href="#" class="action-link">Continue reading</a>
+      </div>
+      </article>
+      
+         <!-- Second post-->
+         <article class="article-recent flex-row">
+          <div class="article-recent-header">
+            <img src="{{ homeData[2].image }}" alt="Dog on the wooden floor looking at the camera.">
+            <p class="article-meta-info">{{ homeData[2].artical_info }}</p>
+          </div>
+          <div class="article-recent-body">
+            <h3 class="article-title">{{ homeData[2].title }}</h3>
+            <p>{{ homeData[2].desc }}</p>
+            <a href="#" class="action-link">Continue reading</a>
+        </div>
+        </article>
+      
+        <!-- Third post-->
+        <article class="article-recent flex-row">
+          <div class="article-recent-header">
+            <img src="{{ homeData[3].image }}" alt="Dog on the wooden floor looking at the camera.">
+            <p class="article-meta-info">{{ homeData[3].artical_info }}</p>
+          </div>
+          <div class="article-recent-body">
+            <h3 class="article-title">{{ homeData[3].title }}</h3>
+            <p>{{ homeData[3].desc }}</p>
+            <a href="#" class="action-link">Continue reading</a>
+        </div>
+        </article>
+
+        <article class="article-recent flex-row">
+          <!-- <div class="article-recent-header">
+            <img src="{{ homeData[3].image }}" alt="Dog on the wooden floor looking at the camera.">
+            <p class="article-meta-info">{{ homeData[3].artical_info }}</p>
+          </div> -->
+          <div class="article-recent-body">
+            <h3 class="article-title">Two way data binding example</h3>
+            <app-data-binding name="{{ name }}" [(size)]="fontSizePx" [(isSpecial)]="isSpecial"></app-data-binding>
+            <p [style.fontSize.px]="fontSizePx" [class.special]="isSpecial">
+              Example :)  this is {{isSpecial? 'true': 'false'}}
+            </p>
+        </div>
+        </article>
+    </main>
+    
+    <aside>
+        <!-- Aside blocks -->
+      <article class="aside-about-me">
+        <h3 class="aside-block-title">About me</h3>
+        <img src="{{ about.image }}" alt="Fill Muray">
+        <p>{{ about.desc }}</p>
+      </article>
+      
+      <section class="aside-recent-posts">
+        <h3 class="aside-block-title">Recent Posts</h3>
+          <!-- Fist post -->
+        <div class="aside-post">
+          <img src="{{ recentPost[0].image}}" alt="Dog on the wooden floor looking at the camera.">
+          <a href="#" class="article-title">{{ recentPost[0].desc }}</a>
+        </div>
+         <!-- Second post -->
+        <div class="aside-post">
+          <img src="{{ recentPost[1].image}}" alt="Dog on the wooden floor looking at the camera.">
+          <a href="#" class="article-title">{{ recentPost[1].desc }}</a>
+        </div>
+         <!-- Third post -->
+        <div class="aside-post">
+          <img src="{{ recentPost[2].image}}" alt="Dog on the wooden floor looking at the camera.">
+          <a href="#" class="article-title">{{ recentPost[2].desc }}</a>
+        </div>
+      </section>
+    </aside>
+  </div>
+  <app-footer></app-footer>
